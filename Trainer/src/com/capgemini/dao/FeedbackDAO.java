@@ -5,6 +5,6 @@ import com.capgemini.beans.Trainer;
 
 public interface FeedbackDAO {
 	public void addFeedback(Trainer trainer);
-	public HashMap<Integer,Trainer> getTrainerList();
+	public HashMap<Integer,Trainer> getTrainerList(int r);
 
 }

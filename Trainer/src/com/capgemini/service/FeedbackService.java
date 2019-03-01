@@ -8,8 +8,8 @@ import com.capgemini.exceptions.InvalidRatingException;
 
 public interface FeedbackService {
 
-	public void addFeedback(Trainer trainer);
-	public HashMap<Integer,Trainer> getTrainerList();
+	public String addFeedback(Trainer trainer) throws InvalidNameException, InvalidCourseNameException, InvalidRatingException;
+	public HashMap<Integer,Trainer> getTrainerList(int r);
 	public boolean validateName(String name) throws InvalidNameException;
 	public boolean validateCourseName(String cname) throws InvalidCourseNameException;
 	public boolean validateRating(int r) throws InvalidRatingException;

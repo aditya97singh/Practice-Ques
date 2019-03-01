@@ -16,7 +16,7 @@ public class MainApp {
 		Scanner sc = new Scanner(System.in);
 		int ch;
 		do {
-			System.out.println("*******Feedback of Trainer*******\n");
+			System.out.println("////////////// Feedback of Trainer \\\\\\\\\\\\\\\\\\");
 			System.out.println(" 1.   Add Trainer Feedback");
 			System.out.println(" 2.   Display Details");
 			System.out.println(" 3.   Exit");
@@ -28,28 +28,29 @@ public class MainApp {
 				System.out.println("Please Enter Name");
 				String name = sc.next();
 				System.out.println("Please Enter Course Name");
-				String cname = sc.next();
-				System.out.println("Please Enter Start Date");
-				int sd = sc.nextInt();
-				int sm = sc.nextInt();
-				int sy = sc.nextInt();
-				System.out.println("Please Enter End Date");
-				int ed = sc.nextInt();
-				int em = sc.nextInt();
-				int ey = sc.nextInt();
+				String coursename = sc.next();
+				System.out.println("Please Enter Start Date as day,month then year");
+				int startday = sc.nextInt();
+				int startmonth = sc.nextInt();
+				int startyear = sc.nextInt();
+				System.out.println("Please Enter End Date as day,month then year");
+				int endday = sc.nextInt();
+				int endmonth = sc.nextInt();
+				int endyear = sc.nextInt();
 				System.out.println("Enter Rating");
-				int r = sc.nextInt();
+				int rate = sc.nextInt();
 
-				Trainer t = new Trainer(name, cname, LocalDate.of(sy, sm, sd), LocalDate.of(ey, em, ed), r);
-                if(fs.validateName(name) && fs.validateCourseName(cname) && fs.validateRating(r) )
+				Trainer t = new Trainer(name, coursename, LocalDate.of(startyear, startmonth, startday), LocalDate.of(endyear, endmonth, endday), rate);
+                if(fs.validateName(name) && fs.validateCourseName(coursename) && fs.validateRating(rate) )
 				{
-                	fs.addFeedback(t);
-				    System.out.println("Welcome :" + name + ", Your deatils are added");
+				    System.out.println("Welcome " + fs.addFeedback(t) + ", Your deatils are added");
 				}
 				break;
 
 			case 2:
-				System.out.println("Details : " + fs.getTrainerList());
+				System.out.println("Enter the rating :");
+				int rating = sc.nextInt();
+				System.out.println("Details : " + fs.getTrainerList(rating));
 				break;
 			}
 		} while (ch != 3);
