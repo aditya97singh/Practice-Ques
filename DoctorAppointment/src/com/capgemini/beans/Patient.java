@@ -1,42 +1,52 @@
 package com.capgemini.beans;
 
+import java.time.LocalDate;
+
 public class Patient {
-	
-	private int id;
-	private String name;
+	private int appointmentid;
+	private String patientname;
 	private String phonno;
 	private String email;
 	private String gender; 
 	private String appointementdate;
 	private int age;
 	private String probname;
-	public Patient() {
+	private String doctorname;
+	private String appointmentstatus; 
+	
+	
+	public Patient(int appointmentid, String patientname, String phonno, String email, String gender,
+			String appointementdate, int age, String probname) {
 		super();
-		// TODO Auto-generated constructor stub
-	}
-	public Patient(int id, String name, String phonno, String email, String gender, String appointementdate, int age,
-			String probname) {
-		super();
-		this.id = id;
-		this.name = name;
+		this.appointmentid = appointmentid;
+		this.patientname = patientname;
 		this.phonno = phonno;
 		this.email = email;
 		this.gender = gender;
 		this.appointementdate = appointementdate;
 		this.age = age;
 		this.probname = probname;
+		
+		
 	}
-	public int getId() {
-		return id;
+	
+	
+	public Patient() {
+		
 	}
-	public void setId(int id) {
-		this.id = id;
+
+
+	public int getAppointmentid() {
+		return appointmentid;
 	}
-	public String getName() {
-		return name;
+	public void setAppointmentid(int appointmentid) {
+		this.appointmentid = appointmentid;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public String getPatientname() {
+		return patientname;
+	}
+	public void setPatientname(String patientname) {
+		this.patientname = patientname;
 	}
 	public String getPhonno() {
 		return phonno;
@@ -74,6 +84,19 @@ public class Patient {
 	public void setProbname(String probname) {
 		this.probname = probname;
 	}
+	public String getDoctorname() {
+		return doctorname;
+	}
+	public void setDoctorname(String doctorname) {
+		this.doctorname = doctorname;
+	}
+	public String getAppointmentstatus() {
+		return appointmentstatus;
+	}
+	public void setAppointmentstatus(String appointmentstatus) {
+		this.appointmentstatus = appointmentstatus;
+	}
 	
-
+	
+	
 }
