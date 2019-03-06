@@ -7,6 +7,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%response.sendRedirect("menu"); %>>
+<h3>Balance Enquiry :</h3>
+<table border="1">
+<tr>
+<th> Mobile Number </th>
+<th>Name </th>
+<th>Balance </th>
+</tr>
+<tr>
+<td>${data.mobileNo }</td>
+<td>${data.name }</td>
+<td>${data.balance }</td>
+</tr>
+</table>
+
+<a href="menu">
+-Return to Menu</a> 
+</body>
 </body>
 </html>

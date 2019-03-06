@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.capgemini.beans.Customer;
 
 
-@Repository("walletrepo")
+@Repository("crepo")
 public class CustomerRepoImpl implements CustomerRepo {
 	
 	@PersistenceContext
